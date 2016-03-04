@@ -5,7 +5,7 @@ import os  #创建文件夹模块
 import random
 
 def url_open(url):  #使用代理之后，爬出来的图片居然不是原来的图片
-	req = urllib.request.Request(url)
+	req = urllib.request.Request(url) #timeout=10 设置超时，防止有些网站访问不了或某些代理IP不起作用
 	req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36')
 	
 	# proxies = ['218.87.116.149:9000', '183.141.69.184:3128', '120.83.68.116:8090', '115.223.221.254:9000']
